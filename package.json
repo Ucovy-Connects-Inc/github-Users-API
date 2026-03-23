@@ -1,0 +1,23 @@
+{
+  "name": "github-users-api",
+  "version": "1.0.0",
+  "description": "\"# github-Users-API\"",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ucovy-Connects-Inc/github-Users-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Ucovy-Connects-Inc/github-Users-API/issues"
+  },
+  "homepage": "https://github.com/Ucovy-Connects-Inc/github-Users-API#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.5.0"
+  }
+}
