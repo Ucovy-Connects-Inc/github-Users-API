@@ -1,18 +1,13 @@
-import { APIRequestContext } from '@playwright/test';
+import { APIRequestContext, APIResponse } from '@playwright/test';
 
-export async function getRequest(request: APIRequestContext, endpoint: string) {
+const baseURL = 'https://api.github.com';
 
-  const startTime = Date.now();
+export async function getAPI(
+  request: APIRequestContext,
+  endpoint: string
+): Promise<APIResponse> {
 
-  const response = await request.get(endpoint);
+  const response = await request.get(`${baseURL}${endpoint}`);
 
-  const endTime = Date.now();
-
-  const responseTime = endTime - startTime;
-
-  console.log(`API: ${endpoint}`);
-  console.log(`Status: ${response.status()}`);
-  console.log(`Response Time: ${responseTime} ms`);
-
-  return response;
+  return response; // 🔥 IMPORTANT
 }
